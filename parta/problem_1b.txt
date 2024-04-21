@@ -1,0 +1,6 @@
+Execute the following commands from pwd
+
+pig src/1b.pig
+pig src/1b_distinct.pig
+
+The output can be accessed at output/1b/part-r-0000 output/1b_distinct/part-r-0000

@@ -1,0 +1,7 @@
+First, compile and archive the java file "src/SPCOUNT.java" into a .jar file and store it as "jars/SPCount.jar"
+Then change the subject and predicate required to be searched in line 4 of "src/2.pig" in place of "<Alice_Roberts>" and "<isCitizenOf>"
+Then execute the following command
+
+pig src/2.pig
+
+The output can be found at output/2/part-r-0000

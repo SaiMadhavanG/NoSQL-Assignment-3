@@ -1,0 +1,5 @@
+Execute the following command from pwd
+
+pig src/1a.pig
+
+The output can be accessed at output/1a/part-r-0000
