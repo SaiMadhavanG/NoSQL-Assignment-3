@@ -1,0 +1,15 @@
+-- Load data from TSV file into a Hive table
+CREATE TABLE records (subject STRING, predicate STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' LOCATION '../data/yago_test.tsv';
+
+-- Group by predicate
+CREATE VIEW predicate_groups AS (SELECT predicate, COUNT(*) as count FROM records GROUP BY predicate);
+
+-- Order by count in descending order, then by predicate in ascending order
+CREATE VIEW ordered_predicate_counts AS (SELECT predicate, count FROM predicate_groups ORDER BY count DESC, predicate ASC);
+
+-- Select top 3 records
+CREATE VIEW top3 AS (SELECT * FROM ordered_predicate_counts LIMIT 3);
+
+-- Store top 3 records
+INSERT OVERWRITE DIRECTORY './2a' (SELECT * from top3);
+
