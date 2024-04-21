@@ -1,0 +1,41 @@
+-- Load data from TSV file into a Hive table
+CREATE TABLE records (
+    subject STRING,
+    predicate STRING,
+    object STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' 
+LOCATION '../data/yago_test.tsv';
+
+-- Get all subjects with more than one livesIn predicate
+CREATE VIEW lives_in_records AS
+SELECT *
+FROM records
+WHERE predicate = '<livesIn>';
+
+CREATE VIEW lives_in_groups AS
+SELECT subject, COUNT(*) AS count
+FROM lives_in_records
+GROUP BY subject;
+
+CREATE VIEW valid_subjets AS
+SELECT *
+FROM lives_in_groups
+WHERE count > 1;
+
+-- Join with hasGivenName
+CREATE VIEW given_name_records AS
+SELECT *
+FROM records
+WHERE predicate = '<hasGivenName>';
+
+CREATE VIEW joined_records AS
+SELECT a.li_subject, b.object
+FROM valid_subjets a
+JOIN given_name_records b
+ON (a.li_subject = b.subject);
+
+-- Store the result into HDFS directory
+INSERT OVERWRITE DIRECTORY './output/2b'
+SELECT *
+FROM joined_records;
