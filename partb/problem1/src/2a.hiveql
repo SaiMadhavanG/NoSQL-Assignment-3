@@ -11,5 +11,5 @@ CREATE VIEW ordered_predicate_counts AS (SELECT predicate, count FROM predicate_
 CREATE VIEW top3 AS (SELECT * FROM ordered_predicate_counts LIMIT 3);
 
 -- Store top 3 records
-INSERT OVERWRITE DIRECTORY './2a' (SELECT * from top3);
+INSERT OVERWRITE DIRECTORY './output/2a' (SELECT * from top3);
 
