@@ -1,16 +1,19 @@
 -- Load data from TSV file into a Hive table
-CREATE TABLE records (
+CREATE TABLE records2 (
     subject STRING,
     predicate STRING,
     object STRING
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' 
-LOCATION '../data/yago_test.tsv';
+LOCATION '../tables';
+
+-- Load data into table records2
+LOAD DATA LOCAL INPATH '../data/yago_full_clean.tsv' INTO TABLE records2;
 
 -- Get all subjects with more than one livesIn predicate
 CREATE VIEW lives_in_records AS
 SELECT *
-FROM records
+FROM records2
 WHERE predicate = '<livesIn>';
 
 CREATE VIEW lives_in_groups AS
@@ -26,16 +29,17 @@ WHERE count > 1;
 -- Join with hasGivenName
 CREATE VIEW given_name_records AS
 SELECT *
-FROM records
+FROM records2
 WHERE predicate = '<hasGivenName>';
 
 CREATE VIEW joined_records AS
-SELECT a.li_subject, b.object
+SELECT b.object
 FROM valid_subjets a
 JOIN given_name_records b
-ON (a.li_subject = b.subject);
+ON (a.subject = b.subject);
 
 -- Store the result into HDFS directory
-INSERT OVERWRITE DIRECTORY './output/2b'
+INSERT OVERWRITE DIRECTORY '../output/2b'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' 
 SELECT *
 FROM joined_records;
