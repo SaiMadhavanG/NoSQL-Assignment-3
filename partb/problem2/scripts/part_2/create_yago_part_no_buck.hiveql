@@ -1,0 +1,9 @@
+create table yago_part_no_buck (
+	subject string,
+	object string)
+partitioned by (predicate string)
+row format delimited
+fields terminated by '\t'
+lines terminated by '\n'
+location 'yago_part_no_buck';
+

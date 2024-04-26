@@ -1,0 +1,4 @@
+drop table yago_part_buck;
+drop table yago_part_no_buck;
+drop table yago_no_part_no_buck;
+drop table yago;
