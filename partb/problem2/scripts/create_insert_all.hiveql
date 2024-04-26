@@ -1,0 +1,10 @@
+source scripts/create_yago_full.hiveql;
+
+source scripts/part_1/create_yago_part_buck.hiveql; 
+source scripts/part_1/insert_yago_part_buck.hiveql;
+
+source scripts/part_2/create_yago_part_no_buck.hiveql; 
+source scripts/part_2/insert_yago_part_no_buck.hiveql;
+
+source scripts/part_3/create_yago_no_part_no_buck.hiveql; 
+source scripts/part_3/insert_yago_no_part_no_buck.hiveql;

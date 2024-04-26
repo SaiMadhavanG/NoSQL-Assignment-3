@@ -1,0 +1,10 @@
+insert overwrite local directory 'output/yago_part_no_buck'
+row format delimited
+fields terminated by '\t'
+lines terminated by '\n'
+stored as textfile 
+select y1.*, y2.* from yago_part_no_buck y1
+	join yago_part_no_buck y2
+	on (y1.subject=y2.subject)
+	where (y1.predicate='<hasGivenName>' and y2.predicate='<livesIn>');
+	

@@ -1,0 +1,57 @@
+insert overwrite table yago_part_buck partition (predicate='<actedIn>') select subject, object from yago where predicate='<actedIn>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasAcademicAdvisor>') select subject, object from yago where predicate='<hasAcademicAdvisor>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasChild>') select subject, object from yago where predicate='<hasChild>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasFamilyName>') select subject, object from yago where predicate='<hasFamilyName>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasWebsite>') select subject, object from yago where predicate='<hasWebsite>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasWonPrize>') select subject, object from yago where predicate='<hasWonPrize>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isInterestedIn>') select subject, object from yago where predicate='<isInterestedIn>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isKnownFor>') select subject, object from yago where predicate='<isKnownFor>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<directed>') select subject, object from yago where predicate='<directed>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<edited>') select subject, object from yago where predicate='<edited>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<graduatedFrom>') select subject, object from yago where predicate='<graduatedFrom>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasGender>') select subject, object from yago where predicate='<hasGender>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasMusicalRole>') select subject, object from yago where predicate='<hasMusicalRole>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isCitizenOf>') select subject, object from yago where predicate='<isCitizenOf>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isMarriedTo>') select subject, object from yago where predicate='<isMarriedTo>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isPoliticianOf>') select subject, object from yago where predicate='<isPoliticianOf>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<playsFor>') select subject, object from yago where predicate='<playsFor>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<worksAt>') select subject, object from yago where predicate='<worksAt>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<wroteMusicFor>') select subject, object from yago where predicate='<wroteMusicFor>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<created>') select subject, object from yago where predicate='<created>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<diedIn>') select subject, object from yago where predicate='<diedIn>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<hasGivenName>') select subject, object from yago where predicate='<hasGivenName>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<influences>') select subject, object from yago where predicate='<influences>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isAffiliatedTo>') select subject, object from yago where predicate='<isAffiliatedTo>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<isLeaderOf>') select subject, object from yago where predicate='<isLeaderOf>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<livesIn>') select subject, object from yago where predicate='<livesIn>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<owns>') select subject, object from yago where predicate='<owns>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<participatedIn>') select subject, object from yago where predicate='<participatedIn>'; 
+
+insert overwrite table yago_part_buck partition (predicate='<wasBornIn>') select subject, object from yago where predicate='<wasBornIn>'; 
