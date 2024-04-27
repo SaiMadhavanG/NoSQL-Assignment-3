@@ -4,4 +4,4 @@ create table yago_no_part_no_buck (
 	object string) 
 	row format delimited fields terminated by ' '
 	lines terminated by '\n'
-	location 'assignment/';
+	location 'yago_no_part_no_buck/';

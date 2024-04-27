@@ -1,1 +1,1 @@
-insert overwrite table yago_no_part_no_buck select subject, predicate, object from yago;
+insert into table yago_no_part_no_buck select subject, predicate, object from yago;

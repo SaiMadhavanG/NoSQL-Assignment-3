@@ -1,57 +1,57 @@
-insert overwrite table yago_part_buck partition (predicate='<actedIn>') select subject, object from yago where predicate='<actedIn>'; 
+insert into table yago_part_buck partition (predicate='<actedIn>') select subject, object from yago where predicate='<actedIn>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasAcademicAdvisor>') select subject, object from yago where predicate='<hasAcademicAdvisor>'; 
+insert into table yago_part_buck partition (predicate='<hasAcademicAdvisor>') select subject, object from yago where predicate='<hasAcademicAdvisor>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasChild>') select subject, object from yago where predicate='<hasChild>'; 
+insert into table yago_part_buck partition (predicate='<hasChild>') select subject, object from yago where predicate='<hasChild>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasFamilyName>') select subject, object from yago where predicate='<hasFamilyName>'; 
+insert into table yago_part_buck partition (predicate='<hasFamilyName>') select subject, object from yago where predicate='<hasFamilyName>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasWebsite>') select subject, object from yago where predicate='<hasWebsite>'; 
+insert into table yago_part_buck partition (predicate='<hasWebsite>') select subject, object from yago where predicate='<hasWebsite>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasWonPrize>') select subject, object from yago where predicate='<hasWonPrize>'; 
+insert into table yago_part_buck partition (predicate='<hasWonPrize>') select subject, object from yago where predicate='<hasWonPrize>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isInterestedIn>') select subject, object from yago where predicate='<isInterestedIn>'; 
+insert into table yago_part_buck partition (predicate='<isInterestedIn>') select subject, object from yago where predicate='<isInterestedIn>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isKnownFor>') select subject, object from yago where predicate='<isKnownFor>'; 
+insert into table yago_part_buck partition (predicate='<isKnownFor>') select subject, object from yago where predicate='<isKnownFor>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<directed>') select subject, object from yago where predicate='<directed>'; 
+insert into table yago_part_buck partition (predicate='<directed>') select subject, object from yago where predicate='<directed>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<edited>') select subject, object from yago where predicate='<edited>'; 
+insert into table yago_part_buck partition (predicate='<edited>') select subject, object from yago where predicate='<edited>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<graduatedFrom>') select subject, object from yago where predicate='<graduatedFrom>'; 
+insert into table yago_part_buck partition (predicate='<graduatedFrom>') select subject, object from yago where predicate='<graduatedFrom>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasGender>') select subject, object from yago where predicate='<hasGender>'; 
+insert into table yago_part_buck partition (predicate='<hasGender>') select subject, object from yago where predicate='<hasGender>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasMusicalRole>') select subject, object from yago where predicate='<hasMusicalRole>'; 
+insert into table yago_part_buck partition (predicate='<hasMusicalRole>') select subject, object from yago where predicate='<hasMusicalRole>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isCitizenOf>') select subject, object from yago where predicate='<isCitizenOf>'; 
+insert into table yago_part_buck partition (predicate='<isCitizenOf>') select subject, object from yago where predicate='<isCitizenOf>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isMarriedTo>') select subject, object from yago where predicate='<isMarriedTo>'; 
+insert into table yago_part_buck partition (predicate='<isMarriedTo>') select subject, object from yago where predicate='<isMarriedTo>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isPoliticianOf>') select subject, object from yago where predicate='<isPoliticianOf>'; 
+insert into table yago_part_buck partition (predicate='<isPoliticianOf>') select subject, object from yago where predicate='<isPoliticianOf>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<playsFor>') select subject, object from yago where predicate='<playsFor>'; 
+insert into table yago_part_buck partition (predicate='<playsFor>') select subject, object from yago where predicate='<playsFor>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<worksAt>') select subject, object from yago where predicate='<worksAt>'; 
+insert into table yago_part_buck partition (predicate='<worksAt>') select subject, object from yago where predicate='<worksAt>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<wroteMusicFor>') select subject, object from yago where predicate='<wroteMusicFor>'; 
+insert into table yago_part_buck partition (predicate='<wroteMusicFor>') select subject, object from yago where predicate='<wroteMusicFor>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<created>') select subject, object from yago where predicate='<created>'; 
+insert into table yago_part_buck partition (predicate='<created>') select subject, object from yago where predicate='<created>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<diedIn>') select subject, object from yago where predicate='<diedIn>'; 
+insert into table yago_part_buck partition (predicate='<diedIn>') select subject, object from yago where predicate='<diedIn>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<hasGivenName>') select subject, object from yago where predicate='<hasGivenName>'; 
+insert into table yago_part_buck partition (predicate='<hasGivenName>') select subject, object from yago where predicate='<hasGivenName>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<influences>') select subject, object from yago where predicate='<influences>'; 
+insert into table yago_part_buck partition (predicate='<influences>') select subject, object from yago where predicate='<influences>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isAffiliatedTo>') select subject, object from yago where predicate='<isAffiliatedTo>'; 
+insert into table yago_part_buck partition (predicate='<isAffiliatedTo>') select subject, object from yago where predicate='<isAffiliatedTo>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<isLeaderOf>') select subject, object from yago where predicate='<isLeaderOf>'; 
+insert into table yago_part_buck partition (predicate='<isLeaderOf>') select subject, object from yago where predicate='<isLeaderOf>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<livesIn>') select subject, object from yago where predicate='<livesIn>'; 
+insert into table yago_part_buck partition (predicate='<livesIn>') select subject, object from yago where predicate='<livesIn>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<owns>') select subject, object from yago where predicate='<owns>'; 
+insert into table yago_part_buck partition (predicate='<owns>') select subject, object from yago where predicate='<owns>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<participatedIn>') select subject, object from yago where predicate='<participatedIn>'; 
+insert into table yago_part_buck partition (predicate='<participatedIn>') select subject, object from yago where predicate='<participatedIn>' distribute by subject; 
 
-insert overwrite table yago_part_buck partition (predicate='<wasBornIn>') select subject, object from yago where predicate='<wasBornIn>'; 
+insert into table yago_part_buck partition (predicate='<wasBornIn>') select subject, object from yago where predicate='<wasBornIn>' distribute by subject; 

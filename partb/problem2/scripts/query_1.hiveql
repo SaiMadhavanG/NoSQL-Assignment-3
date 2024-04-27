@@ -3,8 +3,7 @@ row format delimited
 fields terminated by '\t'
 lines terminated by '\n'
 stored as textfile 
-select y1.*, y2.* from yago_part_buck y1
-	join yago_part_buck y2
-	on (y1.subject=y2.subject)
-	where (y1.predicate='<hasGivenName>' and y2.predicate='<livesIn>');
-	
+select y1.subject, y1.object, y2.object from 
+	(select subject, object from yago_part_buck where predicate='<hasGivenName>') y1
+	join (select subject, object from yago_part_buck where predicate='<livesIn>') y2
+	on (y1.subject=y2.subject);
