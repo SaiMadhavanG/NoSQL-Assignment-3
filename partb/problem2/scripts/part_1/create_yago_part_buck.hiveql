@@ -2,7 +2,7 @@ create table yago_part_buck (
 	subject string,
 	object string)
 	partitioned by (predicate string)
-	clustered by (subject) into 4 buckets
+	clustered by (subject) into 6 buckets
 	row format delimited fields terminated by '\t'
 	lines terminated by '\n'
-	location 'yago_part';
+	location 'yago_part';   
